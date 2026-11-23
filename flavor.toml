@@ -1,0 +1,171 @@
+# Ported from carbonfox (EdenEast/nightfox.nvim) with the highlights used in nvim.
+#
+# Palette
+#
+# | Name        | Color   |
+# | ----------- | ------- |
+# | bg0         | #0c0c0c |
+# | bg1         | #161616 |
+# | bg2         | #252525 |
+# | bg3         | #353535 |
+# | bg4         | #535353 |
+# | fg1         | #f2f4f8 |
+# | fg2         | #b6b8bb |
+# | fg3         | #7b7c7e |
+# | sel0        | #2a2a2a |
+# | sel1        | #525253 |
+# | comment     | #6e6f70 |
+# | red         | #ee5396 |
+# | green       | #25be6a |
+# | yellow      | #08bdba |
+# | blue        | #78a9ff |
+# | blue.bright | #8cb6ff |
+# | magenta     | #be95ff |
+# | cyan        | #33b1ff |
+# | orange      | #3ddbd9 |
+# | pink        | #ff7eb6 |
+# | pink.dim    | #d96b9b |
+
+[app]
+overall = { bg = "#161616" }
+
+[mgr]
+cwd = { fg = "#3ddbd9", bold = true }
+
+find_keyword = { fg = "#161616", bg = "#3ddbd9", bold = true }
+find_position = { fg = "#be95ff", bg = "reset", bold = true, italic = true }
+
+symlink_target = { fg = "#d96b9b", italic = true }
+
+marker_copied = { fg = "#25be6a", bg = "#25be6a" }
+marker_cut = { fg = "#ee5396", bg = "#ee5396" }
+marker_marked = { fg = "#33b1ff", bg = "#33b1ff" }
+marker_selected = { fg = "#be95ff", bg = "#be95ff" }
+
+count_copied = { fg = "#161616", bg = "#25be6a" }
+count_cut = { fg = "#161616", bg = "#ee5396" }
+count_selected = { fg = "#161616", bg = "#be95ff" }
+
+border_style = { fg = "#0c0c0c" }
+border_symbol = "│"
+
+[tabs]
+active = { fg = "#161616", bg = "#78a9ff", bold = true }
+inactive = { fg = "#b6b8bb", bg = "#252525" }
+
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+[mode]
+normal_alt = { fg = "#78a9ff", bg = "#252525" }
+normal_main = { fg = "#161616", bg = "#78a9ff", bold = true }
+
+select_alt = { fg = "#be95ff", bg = "#252525" }
+select_main = { fg = "#161616", bg = "#be95ff", bold = true }
+
+unset_alt = { fg = "#be95ff", bg = "#252525" }
+unset_main = { fg = "#161616", bg = "#be95ff", bold = true }
+
+[indicator]
+current = { bg = "#353535" }
+padding = { open = "█", close = "█" }
+parent = { bg = "#252525" }
+preview = { bg = "#252525" }
+
+[status]
+overall = { fg = "#f2f4f8", bg = "#0c0c0c" }
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+perm_exec = { fg = "#25be6a" }
+perm_read = { fg = "#08bdba" }
+perm_sep = { fg = "#535353" }
+perm_type = { fg = "#78a9ff" }
+perm_write = { fg = "#ee5396" }
+
+progress_error = { fg = "#ee5396", bg = "#353535" }
+progress_label = { fg = "#f2f4f8", bold = true }
+progress_normal = { fg = "#25be6a", bg = "#353535" }
+
+[which]
+border = { fg = "#7b7c7e" }
+cand = { fg = "#33b1ff" }
+cols = 3
+desc = { fg = "#be95ff" }
+mask = { bg = "#353535" }
+rest = { fg = "#6e6f70" }
+separator = " ➜ "
+separator_style = { fg = "#6e6f70" }
+
+[confirm]
+body = { fg = "#f2f4f8" }
+border = { fg = "#7b7c7e" }
+btn_no = {}
+btn_yes = { fg = "#161616", bg = "#78a9ff", bold = true }
+list = { fg = "#b6b8bb" }
+title = { fg = "#8cb6ff", bold = true }
+
+[spot]
+border = { fg = "#7b7c7e" }
+tbl_cell = { fg = "#f2f4f8", bg = "#525253" }
+tbl_col = { fg = "#78a9ff" }
+title = { fg = "#8cb6ff", bold = true }
+
+[notify]
+title_error = { fg = "#ee5396" }
+title_info = { fg = "#78a9ff" }
+title_warn = { fg = "#be95ff" }
+
+[pick]
+active = { fg = "#f2f4f8", bg = "#525253", bold = true }
+border = { fg = "#7b7c7e" }
+inactive = {}
+
+[input]
+border = { fg = "#7b7c7e" }
+selected = { bg = "#2a2a2a" }
+title = { fg = "#8cb6ff", bold = true }
+value = {}
+
+[cmp]
+active = { fg = "#f2f4f8", bg = "#525253" }
+border = { fg = "#7b7c7e" }
+inactive = {}
+
+[tasks]
+border = { fg = "#7b7c7e" }
+hovered = { bg = "#353535", bold = true }
+title = { fg = "#8cb6ff", bold = true }
+
+[help]
+action = { fg = "#b6b8bb" }
+border = { fg = "#7b7c7e" }
+chord = { fg = "#33b1ff" }
+hovered = { bg = "#353535", bold = true }
+
+[filetype]
+rules = [
+   { url = "*", is = "orphan", fg = "#ee5396" },
+   { url = "*", is = "exec", fg = "#25be6a" },
+   { url = "*", is = "dummy", fg = "#ee5396" },
+   { url = "*/", is = "dummy", fg = "#ee5396" },
+   { url = "*", fg = "#b6b8bb" },
+   { url = "*/", fg = "#78a9ff" },
+]
+
+[icon]
+conds = [
+   { if = "orphan", text = "", fg = "#ee5396" },
+   { if = "link", text = "", fg = "#6e6f70" },
+   { if = "block", text = "", fg = "#08bdba" },
+   { if = "char", text = "", fg = "#08bdba" },
+   { if = "fifo", text = "", fg = "#08bdba" },
+   { if = "sock", text = "", fg = "#08bdba" },
+   { if = "sticky", text = "", fg = "#08bdba" },
+   { if = "dummy", text = "", fg = "#ee5396" },
+   { if = "dir & hovered", text = "󰝰", fg = "#78a9ff" },
+   { if = "dir", text = "󰉋", fg = "#78a9ff" },
+   { if = "exec", text = "", fg = "#25be6a" },
+   { if = "!dir", text = "", fg = "#f2f4f8" },
+]
+dirs = []
